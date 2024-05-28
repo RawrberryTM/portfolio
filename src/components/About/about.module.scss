@@ -1,0 +1,268 @@
+.container{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-top: 100px;
+    // padding-top: 70px;
+
+
+    
+}
+
+
+  .svgIcon{
+    position: absolute;
+    height: 600px;
+    object-fit: fill;
+    z-index: -2;
+    width: 600px;
+    left: 10%;
+    top: 19%;
+
+  }
+
+
+.description{
+    margin-top: 3rem;
+    max-width: 80%;
+    font-size: 100px;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 3rem;
+  }
+
+.middleTitle{
+  font-style: italic;
+  color: #0FC06B;
+}
+
+.boldTitle{
+    font-size: 120px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    color: white;
+    line-height: 1.1cap;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+    h1{
+      width: 100%;
+    }
+  }
+
+
+.innerContainer{
+  margin-top: 200px;
+  width: 100%;
+}
+  
+  
+  .blob{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    height: 30%;
+    background: conic-gradient(hsl(0, 0%, 0%), hsla(0, 0%, 100%, 0.1));
+  }
+
+
+  .aboutMeContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 160px;
+    flex-direction: column;
+    gap: 40px;
+    position: relative;
+  }
+
+  .innerAboutMeContainer{
+    width: 100%;
+    display: flex;
+    padding: 0 60px;
+
+    .aboutMeText{
+      width: 70%;
+      height: 500px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .textContainer{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+
+        p{
+          color: #fff;
+          font-size: 2.4rem;
+          line-height: 61px;
+          font-family: "Poppins", sans-serif;
+          font-weight: 300;
+          letter-spacing: 1.09px;
+        }
+      }
+    }
+
+    .imageContainer{
+      width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    
+      transform: rotate3d(0.5, -0.866, 0, 15deg) rotate(1deg);
+
+
+      .imageBorder{
+        padding: 25px;
+        border-radius: 10px;
+        border: 1.9px solid rgba(255, 255, 255, 0.2);      }
+
+
+
+    }
+  }
+
+
+  .outerAboutMeConatiner{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 100px;
+
+    .textBoxContainer{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      // justify-content: center;
+      // gap: 50px;
+// 
+      .innerTextBoxContainer{
+        width: 60%;
+
+        p{
+          color: #fff;
+          font-size: 1rem;
+          font-family: "Poppins", sans-serif;
+          font-weight: 300;
+          letter-spacing: 1.09px;
+          line-height: 31px;
+        }
+      }
+
+    }
+  }
+
+  .svgIcon{
+    position: absolute;
+    height: 600px;
+    object-fit: fill;
+    z-index: -2;
+    width: 600px;
+    left: 10%;
+    top: 19%;
+
+  }
+
+  .svgIcon1{
+    position: absolute;
+    height: 600px;
+    object-fit: fill;
+    z-index: -2;
+    width: 600px;
+    right: -4%;
+    top: -4%;
+
+  }
+
+  @keyframes gradient {
+    0% {
+      background-position: 0 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0 50%;
+    }
+  }  
+
+
+
+  
+  @media (max-width: 440px) {
+
+    .middleTitle{
+      font-style: italic;
+      color: #0FC06B;
+    }
+    
+    .boldTitle{
+        font-size: 60px;
+ 
+    
+        h1{
+          width: 100%;
+        }
+      }
+
+      .innerAboutMeContainer{
+        flex-direction: column;
+        padding: 0 30px;
+
+
+        .imageContainer{
+          width: 100%;   
+
+      }
+
+
+      .aboutMeText{
+        width: 100%;
+       
+  
+        .textContainer{
+          gap: 0px;
+  
+  
+          p{
+            font-size: 1.1rem;
+            line-height: 41px;
+            letter-spacing: 1.07px;
+          }
+        }
+      }
+    }
+
+    .svgIcon1{
+      top: -2%;
+  
+    }
+
+    .svgIcon{
+      top: 12%;
+    }
+
+    .outerAboutMeConatiner{
+      padding: 0 20px;
+  
+      .textBoxContainer{
+        .innerTextBoxContainer{
+          width: 100%;
+          p{
+            line-height: 35px;
+          }
+        }
+  
+      }
+    }
+  
+  }

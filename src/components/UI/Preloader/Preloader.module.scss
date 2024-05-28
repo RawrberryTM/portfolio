@@ -1,0 +1,30 @@
+.introduction{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 299;
+    background-color: black;
+    svg{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: calc(100% + 300px);
+        path{
+            fill: black;
+        }
+    }
+    p{
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        display: flex;
+        color: #0FC06B;
+        font-size: 52px;
+        letter-spacing: 1px;
+        align-items: center;
+        position: absolute;
+        z-index: 1;
+    }
+}
