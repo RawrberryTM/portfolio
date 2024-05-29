@@ -19,16 +19,18 @@ const About = () => {
     if (isInView) {
       dispatch(setNavbarState("About"));
     }
-  }, [isInView]);
+  }, [isInView, dispatch]);
 
   const x = useTransform(scrollYProgress, [0, 1], [-510, 600]);
   const y = useTransform(scrollYProgress, [0, 1], [130, -190]);
 
   const getNegativeX = () => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     return useTransform(x, (value) => -value);
   };
 
   const twiceYValue = () => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     return useTransform(y, (value) => value * 2.5);
   };
 
