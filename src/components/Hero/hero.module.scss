@@ -77,8 +77,13 @@
 }
 
 .svgIcon1{
-  bottom: -4%;
-  right: -10%;
+  position: absolute;
+  object-fit: fill;
+  z-index: -2;
+  height: 100px;
+  width: 100px;
+  bottom: 30%;
+  left: 15%;
 }
 
 .svgIcon4{
@@ -98,9 +103,13 @@
 }
 
 .svgIcon3{
-  top: 7%;
-  right: -7%;
-
+  position: absolute;
+  object-fit: fill;
+  z-index: -2;
+  height: 100px;
+  width: 100px;
+  bottom: 30%;
+  right: 20%;
 }
 
 .svgIcon5{
@@ -115,8 +124,14 @@
 }
 
 .svgIcon7{
-  bottom: -5%;
-  left: 3%;
+  position: absolute;
+  height: 100px;
+  object-fit: fill;
+  z-index: -2;
+  width: 100px;
+  
+  top: 30%;
+  right: 15%;
 }
 
 

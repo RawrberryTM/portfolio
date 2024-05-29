@@ -40,7 +40,7 @@
 
 
         &:hover{
-            background-color: #0FC06B;
+            background-color: #77B73B;
             border: 1.4px solid rgb(255, 255, 255);
 
         }
@@ -66,7 +66,7 @@
             transition: color .6s;
             &:hover{
 
-                color: #0FC06B;
+                color: #77B73B;
             }
         }
 
@@ -82,7 +82,7 @@
     transform: translate(-50%, -50%);
     font-family: "Poppins", sans-serif;
     font-weight: 300;
-    color: #0FC06B;
+    color: #77B73B;
     text-align: center;
     letter-spacing: 1px;
 
@@ -90,13 +90,21 @@
 
 .svgIcon1{
     position: absolute;
-    height: 600px;
+    height: 200px;
     object-fit: fill;
     z-index: 2;
-    width: 600px;
-    right: -12%;
-    top: -11%;
-
+    width: 500px;
+    right: 1%;
+    top: 22%;
+  }
+.svgIcon2{
+    position: absolute;
+    height: 200px;
+    object-fit: fill;
+    z-index: 2;
+    width: 500px;
+    left: 1%;
+    bottom: 40%;
   }
 
 

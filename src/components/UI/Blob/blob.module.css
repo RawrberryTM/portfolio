@@ -1,59 +1,62 @@
-.blob{
-    position: absolute;
-    pointer-events: none;
-    filter: blur(10rem);
-  }
-  .v1{
-    right: -50%;
-    top: -50%;
-    width: 60%;
-    height: 80%;
-    background: conic-gradient(#000, #0528a2);
-  }
-  .v2{
-    left: -20%;
-    top: 17%;
-    width: 30%;
-    height: 40%;
-    z-index: -2;
-    background: conic-gradient(from 2.35rad, hsl(288, 76%, 63%), hsla(234, 94%, 46.1%, 0.5));
-  }
-  .v3{
-    left: 10%;
-    top: 50%;
-    width: 30%;
-    height: 50%;
-    background: conic-gradient(hsla(0, 0%, 24%, 1), hsla(234, 60%, 62%, 0.323));
-  }
+.blob {
+  position: absolute;
+  pointer-events: none;
+  filter: blur(10rem);
+}
+.v1 {
+  right: -50%;
+  top: -50%;
+  width: 60%;
+  height: 80%;
+  background: conic-gradient(#000, rgb(119 183 59));
+}
+.v2 {
+  left: -20%;
+  top: 17%;
+  width: 30%;
+  height: 40%;
+  z-index: -2;
+  background: conic-gradient(
+    from 2.35rad,
+    hsl(288, 76%, 63%),
+    hsla(234, 94%, 46.1%, 0.5)
+  );
+}
+.v3 {
+  left: 10%;
+  top: 50%;
+  width: 30%;
+  height: 50%;
+  background: conic-gradient(hsla(0, 0%, 24%, 1), hsla(234, 60%, 62%, 0.323));
+}
 
-  .v4{
-    left: 35%;
-    top: 40%;
-    width: 30%;
-    height: 50%;
-    background: conic-gradient(#000, #0528a2);
-  }
+.v4 {
+  left: 35%;
+  top: 40%;
+  width: 30%;
+  height: 50%;
+  background: conic-gradient(#000, #0528a2);
+}
 
-
-.container{
+.container {
   position: fixed;
   width: 100%;
   z-index: -4;
   height: 100vh;
 }
 
-.blobContainer{
-    background: #000 radial-gradient(circle, rgba(15, 192, 107, 0.3), rgba(15, 192, 107, 0) 60%);
-    height: 1100px;
-    aspect-ratio: 1;
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    translate: -50% -50%;
-    border-radius: 50%;
-    filter: blur(110px);
+.blobContainer {
+  background: #000
+    radial-gradient(circle, rgba(119, 183, 59, 0.3), rgba(119, 183, 59, 0) 60%);
+  height: 1100px;
+  aspect-ratio: 1;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  border-radius: 50%;
+  filter: blur(110px);
 }
-
 
 @media (max-width: 640px) {
   /* .container{
@@ -61,5 +64,3 @@
     visibility: hidden;
   } */
 }
- 
-  

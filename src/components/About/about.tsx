@@ -1,124 +1,100 @@
-import React, { useEffect, useRef } from 'react';
-import { motion, useInView, useScroll, useTransform } from 'framer-motion';
-import styles from './about.module.scss';
-import Blobs from '../UI/Blob/blob';
-import Image from 'next/image';
-import { useDispatch, useSelector } from 'react-redux';
-import { getNavState } from '@/redux/reducer/NavbarStateSelector';
-import { setNavbarState } from '@/redux/reducer/NavbarStateReducer';
-
-
+import React, { useEffect, useRef } from "react";
+import { motion, useInView, useScroll, useTransform } from "framer-motion";
+import styles from "./about.module.scss";
+import Blobs from "../UI/Blob/blob";
+import Image from "next/image";
+import { useDispatch, useSelector } from "react-redux";
+import { getNavState } from "@/redux/reducer/NavbarStateSelector";
+import { setNavbarState } from "@/redux/reducer/NavbarStateReducer";
 
 const About = () => {
- 
-    const target = useRef<HTMLDivElement | null>(null)    
-    const { scrollYProgress } = useScroll();
+  const target = useRef<HTMLDivElement | null>(null);
+  const { scrollYProgress } = useScroll();
 
-    const isInView = useInView(target);
-    const dispatch = useDispatch()
-    const navState = useSelector(getNavState)
+  const isInView = useInView(target);
+  const dispatch = useDispatch();
+  const navState = useSelector(getNavState);
 
-    useEffect(() =>{
-            if (isInView){
-                dispatch(setNavbarState("About"))
-            }
-    }, [isInView])
-
-    const x = useTransform(scrollYProgress, [0, 1], [-510, 600]);
-    const y = useTransform(scrollYProgress, [0, 1], [130, -190]);
-
-    const getNegativeX  = () => {
-        return useTransform(x, value => -value);
-        
+  useEffect(() => {
+    if (isInView) {
+      dispatch(setNavbarState("About"));
     }
+  }, [isInView]);
 
-    const twiceYValue = () =>{
-        return useTransform(y, value => value * 2.5);
-    }
+  const x = useTransform(scrollYProgress, [0, 1], [-510, 600]);
+  const y = useTransform(scrollYProgress, [0, 1], [130, -190]);
 
+  const getNegativeX = () => {
+    return useTransform(x, (value) => -value);
+  };
 
-    return (
-        <div id='About' ref={target} className={styles.container}>
-            <div className={styles.innerContainer}>
+  const twiceYValue = () => {
+    return useTransform(y, (value) => value * 2.5);
+  };
 
-                <div className={styles.boldTitle}>
-                    <motion.h1 style={{x}} >
-                        A little bit
-                    </motion.h1>
-                    <h1 className={styles.middleTitle}>
-                        About
-                    </h1>
-                    <motion.h1 style={{x: getNegativeX()}}>
-                        Myself
-                    </motion.h1>
-                </div>
-                
-                <div className={styles.aboutMeContainer}>
-                    <div className={styles.innerAboutMeContainer}>
+  return (
+    <div id="About" ref={target} className={styles.container}>
+      <div className={styles.innerContainer}>
+        <div className={styles.boldTitle}>
+          <motion.h1 style={{ x }}>A little bit</motion.h1>
+          <h1 className={styles.middleTitle}>About</h1>
+          <motion.h1 style={{ x: getNegativeX() }}>Rawrberry</motion.h1>
+        </div>
 
-                        <div className={styles.aboutMeText}>
-                            <div className={styles.textContainer}>
-                                <p>My name is <span className='text-[3rem] font-medium max-sm:text-[1.4rem]'>Manu Rajbhar</span>, but you can call me MR :) I am a <span className='text-[3rem] font-medium max-sm:text-[1.4rem]'>Software Developer</span> interested in building iOS and web apps, coding video games, and training machine learning models.</p>
-                                {/* <p>I love modern Swift and my major programming languages are Swift and Typescript I have a lot of experience in SwifUI, UIKit, React.js, and Next.js, and I have been coding for a long time.</p> */}
-                            </div>
-                        </div>
-
-                        <div  className={styles.imageContainer}>
-                            <motion.div style={{y: twiceYValue()}} className={styles.imageBorder}>
-                                <div className="h-[450px] w-[310px] relative object-fill">
-                                    <Image src={"/imgs/myPicture.jpg"} fill style={{objectFit: "cover"}} alt='manu'/>
-                                </div>
-                            </motion.div>
-                        </div>    
-
-                    </div>
-
-                    <div className={styles.outerAboutMeConatiner}>
-                        
-                        <div className={styles.textBoxContainer}>
-                            {/* <div className={styles.innerTextBoxContainer}>
-                                 <p>I have previous experience as a software developer intern at MoodMe. 
-                                     There, I assisted in developing features for an emotion analysis application using React 
-                                     and collaborated with team members to design and implement user interfaces.</p>
-                                <p>Above all, I am highly passionate, 
-                                    or you can say "so in love," with creating games (in Unreal Engine). 
-                                    Building games out of my imagination has always been a dream.</p>
-                            </div> */}
-
-                            <div className={styles.innerTextBoxContainer}>
-                                
-                                <p>⭐️ In my free time ,i love doing things such as learning to Cook 🥘, Gardening 🧑🏼‍🌾, and Knitting 🧶. I'm also into snapping cool shots ✨, especially of nature 🌱. Whenever I spot something that catches my eye, I whip out my phone, fire up the camera 📸, and capture the moment.</p> 
-                                <p className='cursor-pointer'>If you're curious, check out my shots in the gallery section. They're pretty cool.</p> 
-                            </div>      
-
-                        </div>
-
-                    </div> 
-                </div>
+        <div className={styles.aboutMeContainer}>
+          <div className={styles.innerAboutMeContainer}>
+            <div className={styles.aboutMeText}>
+              <div className={styles.textContainer}>
+                <p>
+                  Where{" "}
+                  <span className="text-[3rem] font-medium max-sm:text-[1.4rem]">
+                    Dreams
+                  </span>{" "}
+                  Become Games
+                </p>
+              </div>
             </div>
-        <div 
-        style={{
-            transform: isInView ? "none" : "translateX(-200px)",
-            opacity: isInView ? 1 : 0,
-            transformOrigin: 0,
-            transition: "all 1.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
-          }}
-        className={`${styles.svgIcon}`}>
-            <Image fill alt="Hello" src={"/icons/smile.svg"}/>
-        </div>
-        <div 
-        style={{
-            transform: isInView ? "none" : "translateX(200px)",
-            opacity: isInView ? 1 : 0,
-            transformOrigin: 0,
-            transition: "all 1.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
-          }}
-        className={`${styles.svgIcon1}`}>
-            <Image fill alt="Hello" src={"/icons/smile.svg"}/>
-        </div>
+          </div>
 
+          <div className={styles.outerAboutMeConatiner}>
+            <div className={styles.textBoxContainer}>
+              <div className={styles.innerTextBoxContainer}>
+                <p>
+                  We, Rawrberry, are talented individuals dedicated to creating
+                  immersive and captivating gaming experiences for the players
+                  around the globe. We bring together a diverse range of skills,
+                  including programming, art, design, and storytelling, to bring
+                  our ideas to life.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-    );
+      </div>
+      <div
+        style={{
+          transform: isInView ? "none" : "translateX(-200px)",
+          opacity: isInView ? 1 : 0,
+          transformOrigin: 0,
+          transition: "all 1.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+        }}
+        className={`${styles.svgIcon}`}
+      >
+        <Image fill alt="Hello" src={"/icons/c++.svg"} />
+      </div>
+      <div
+        style={{
+          transform: isInView ? "none" : "translateX(200px)",
+          opacity: isInView ? 1 : 0,
+          transformOrigin: 0,
+          transition: "all 1.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+        }}
+        className={`${styles.svgIcon1}`}
+      >
+        <Image fill alt="Hello" src={"/icons/unrealengine.svg"} />
+      </div>
+    </div>
+  );
 };
 
 export default About;

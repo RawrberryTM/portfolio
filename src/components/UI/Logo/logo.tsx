@@ -1,21 +1,21 @@
-import React from 'react'
-import styles from './logo.module.scss'
-import Image from 'next/image'
+import React from "react";
+import Image from "next/image";
+import { cn } from "@/lib/utils";
 
-
-const Logo = () => {
-    
-
-
-  return (
-    <div className={styles.logo}>
-        <div className='relative h-[150px] w-[150px] object-fill overflow-hidden flex items-start'>
-          <Image src={"/icons/smile-logo.svg"} fill alt='logo'/>
-        </div>
-      
-
-    </div>
-  )
+interface LogoProps {
+  className: string;
 }
 
-export default Logo
+const Logo = ({ className }: LogoProps) => {
+  return (
+    <Image
+      src={"/imgs/logo.png"}
+      alt="logo"
+      width={50}
+      height={50}
+      className={cn(className)}
+    />
+  );
+};
+
+export default Logo;

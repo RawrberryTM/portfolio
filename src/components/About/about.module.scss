@@ -33,7 +33,7 @@
 
 .middleTitle{
   font-style: italic;
-  color: #0FC06B;
+  color: #77B73B;
 }
 
 .boldTitle{
@@ -74,29 +74,31 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 160px;
+    margin-top: 16px;
     flex-direction: column;
-    gap: 40px;
+    gap: 10px;
     position: relative;
   }
 
   .innerAboutMeContainer{
     width: 100%;
     display: flex;
-    padding: 0 60px;
+    height: 30vh;
+    justify-content: center;
+    padding: 0 10px;
 
     .aboutMeText{
-      width: 70%;
-      height: 500px;
+      width: 60%;
+      height: 400px;
       display: flex;
       justify-content: center;
       align-items: center;
 
       .textContainer{
-        width: 90%;
+        width: 100%;
         display: flex;
-        flex-direction: column;
-        gap: 20px;
+        gap: 1px;
+        justify-content: center;
 
 
         p{
@@ -142,7 +144,7 @@
       display: flex;
       flex-direction: row;
       align-items: center;
-      // justify-content: center;
+      justify-content: center;
       // gap: 50px;
 // 
       .innerTextBoxContainer{
@@ -163,23 +165,23 @@
 
   .svgIcon{
     position: absolute;
-    height: 600px;
     object-fit: fill;
     z-index: -2;
-    width: 600px;
-    left: 10%;
-    top: 19%;
+    height: 10rem;
+    width: 10rem;
+    left: 20%;
+    top: 30%;
 
   }
 
   .svgIcon1{
     position: absolute;
-    height: 600px;
     object-fit: fill;
     z-index: -2;
-    width: 600px;
-    right: -4%;
-    top: -4%;
+    height: 10rem;
+    width: 9rem;
+    right: 15%;
+    top: 11%;
 
   }
 
@@ -202,7 +204,7 @@
 
     .middleTitle{
       font-style: italic;
-      color: #0FC06B;
+      color: #77B73B;
     }
     
     .boldTitle{
